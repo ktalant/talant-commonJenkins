@@ -69,6 +69,9 @@ def slavePodTemplate = """
           if("${TERRAFORM_APPLY}" == "true"){
             println("i will apply changes")
           }
+          else{
+            println("I will not apply")
+          }
         }
 
       }
