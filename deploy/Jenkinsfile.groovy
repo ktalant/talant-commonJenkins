@@ -67,13 +67,7 @@ def slavePodTemplate = """
 
         stage("Checking"){
           container("fuchicorptools"){
-            if("${TERRAFORM_APPLY}" == "true"){
-              println("i will apply changes")
-            }
-            else{
-              println("PLAN")
-            }
-
+            dir("${WORKSPACE}/")
           }
         }
 
